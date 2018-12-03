@@ -1,4 +1,4 @@
-package at.htl.assignment06.people;
+package at.htl.assignment06.model.people;
 
 import javax.persistence.*;
 
@@ -22,7 +22,7 @@ public abstract class Person
     @Column(name = "NAME", nullable = false)
     private String name;
     @Column(name = "AGE", nullable = false)
-    private String age;
+    private Long age;
     @Column(name = "CLEARANCE", nullable = false)
     private Integer clearance;
 
@@ -36,12 +36,12 @@ public abstract class Person
         this.name = name;
     }
 
-    public String getAge()
+    public Long getAge()
     {
         return age;
     }
 
-    public void setAge(String age)
+    public void setAge(Long age)
     {
         this.age = age;
     }
@@ -56,7 +56,7 @@ public abstract class Person
         this.clearance = clearance;
     }
 
-    public Person(String name, String age, Integer clearance)
+    public Person(String name, Long age, Integer clearance)
     {
         this.name = name;
         this.clearance = clearance;

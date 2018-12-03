@@ -1,4 +1,4 @@
-package at.htl.assignment06.people;
+package at.htl.assignment06.model.people;
 
 import javax.persistence.*;
 
@@ -14,7 +14,7 @@ public class Guide extends Staff
     @Column(name = "VERSION")
     private int version;
 
-    public Guide(String name, String age, Double salary)
+    public Guide(String name, Long age, Double salary)
     {
         super(name, age, Person.DEFAULT_CLEARANCE_PERSONNEL, salary);
     }

@@ -1,6 +1,6 @@
-package at.htl.assignment06.events;
+package at.htl.assignment06.model.events;
 
-import at.htl.assignment06.people.Visitor;
+import at.htl.assignment06.model.people.Visitor;
 
 import javax.persistence.*;
 

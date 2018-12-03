@@ -1,4 +1,4 @@
-package at.htl.assignment06.events;
+package at.htl.assignment06.model.events;
 
 import javax.persistence.*;
 

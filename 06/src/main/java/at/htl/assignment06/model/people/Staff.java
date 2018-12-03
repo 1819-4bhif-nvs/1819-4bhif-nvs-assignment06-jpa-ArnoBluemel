@@ -1,4 +1,4 @@
-package at.htl.assignment06.people;
+package at.htl.assignment06.model.people;
 
 import javax.persistence.*;
 
@@ -28,7 +28,7 @@ public abstract class Staff extends Person
         this.salary = salary;
     }
 
-    public Staff(String name, String age, Integer clearance, Double salary)
+    public Staff(String name, Long age, Integer clearance, Double salary)
     {
         super(name, age, clearance);
         this.salary = salary;

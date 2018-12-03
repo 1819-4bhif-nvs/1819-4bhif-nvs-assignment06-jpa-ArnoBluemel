@@ -1,6 +1,6 @@
-package at.htl.assignment06.people;
+package at.htl.assignment06.model.people;
 
-import at.htl.assignment06.objects.Exhibit;
+import at.htl.assignment06.model.objects.Exhibit;
 
 import javax.persistence.*;
 
@@ -29,7 +29,7 @@ public class Visitor extends Person
         this.favouriteObject = favouriteObject;
     }
 
-    public Visitor(String name, String age, Exhibit favouriteObject)
+    public Visitor(String name, Long age, Exhibit favouriteObject)
     {
         super(name, age, Person.DEFAULT_CLEARANCE_VISITOR);
         this.favouriteObject = favouriteObject;

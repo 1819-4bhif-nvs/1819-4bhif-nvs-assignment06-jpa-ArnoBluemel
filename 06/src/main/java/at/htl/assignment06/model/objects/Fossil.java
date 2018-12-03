@@ -1,6 +1,6 @@
-package at.htl.assignment06.objects;
+package at.htl.assignment06.model.objects;
 
-import at.htl.assignment06.building.ExhibitionRoom;
+import at.htl.assignment06.model.building.ExhibitionRoom;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package at.htl.assignment06.building;
+package at.htl.assignment06.model.building;
 
 import javax.persistence.*;
 

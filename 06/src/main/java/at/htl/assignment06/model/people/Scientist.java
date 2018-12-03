@@ -1,4 +1,4 @@
-package at.htl.assignment06.people;
+package at.htl.assignment06.model.people;
 
 import javax.persistence.*;
 
@@ -51,7 +51,7 @@ public class Scientist extends Staff
         this.titlePostfix = titlePostfix;
     }
 
-    public Scientist(String name, String age, Double salary, String fieldOfResearch, String titlePrefix, String titlePostfix) {
+    public Scientist(String name, Long age, Double salary, String fieldOfResearch, String titlePrefix, String titlePostfix) {
         super(name, age, Person.DEFAULT_CLEARANCE_SCIENTIST, salary);
         this.fieldOfResearch = fieldOfResearch;
         this.titlePrefix = titlePrefix;
