@@ -6,11 +6,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "EXHIBITS")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Exhibit
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
     private Long id;
     @Version
@@ -21,8 +21,11 @@ public abstract class Exhibit
     private String exhibitName;
     @Column(name = "ORIGIN", nullable = false)
     private String origin;
-    @Column(name = "ROOM", nullable = false)
+    //@Column(name = "ROOM", nullable = false)
+    @ManyToOne
     private ExhibitionRoom room;
+
+    protected Exhibit() { }
 
     public String getExhibitName()
     {
@@ -54,7 +57,7 @@ public abstract class Exhibit
         this.room = room;
     }
 
-    public Exhibit(String exhibitName, String origin, ExhibitionRoom room)
+    protected Exhibit(String exhibitName, String origin, ExhibitionRoom room)
     {
         this.exhibitName = exhibitName;
         this.origin = origin;

@@ -4,14 +4,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ROOMS")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Room
 {
     protected static Integer DEFAULT_CLEARANCE_EXHIBITION_ROOM = 0;
     protected static Integer DEFAULT_CLEARANCE_RESEARCH_ROOM = 2;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
     private Long id;
     @Version
@@ -22,6 +22,8 @@ public abstract class Room
     private String roomName;
     @Column(name = "CLEARANCE", nullable = false)
     private Integer clearance; //0 = Visitors, 1 = Staff, 2 = Scientists, ...
+
+    protected Room() { }
 
     public String getRoomName()
     {
@@ -43,7 +45,7 @@ public abstract class Room
         this.clearance = clearance;
     }
 
-    public Room(String roomName, Integer clearance)
+    protected Room(String roomName, Integer clearance)
     {
         this.roomName = roomName;
         this.clearance = clearance;

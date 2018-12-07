@@ -16,7 +16,8 @@ public class ExhibitionRoom extends Room
     @Column(name = "VERSION")
     private int version;
 
-    @Column(name = "CARETAKER")
+    //@Column(name = "CARETAKER")
+    @ManyToOne
     private Scientist caretaker;
 
     public ExhibitionRoom(String roomName, Scientist caretaker)
@@ -24,4 +25,6 @@ public class ExhibitionRoom extends Room
         super(roomName, Room.DEFAULT_CLEARANCE_EXHIBITION_ROOM);
         this.caretaker = caretaker;
     }
+
+    public ExhibitionRoom() { }
 }

@@ -23,12 +23,15 @@ public class Tour extends Visit
     private String title;
     @Column(name = "START", nullable = false)
     private LocalDateTime start;
-    @Column(name = "END", nullable = false)
-    private LocalDateTime end;
-    @Column(name = "TOUR_GUIDE", nullable = false)
+    @Column(name = "DURATION", nullable = false)
+    private Long duration;
+    //@Column(name = "TOUR_GUIDE", nullable = false)
+    @ManyToOne
     private Guide tourGuide;
-    //?
+    @OneToMany
     private List<Visitor> visitors;
+
+    public Tour() { }
 
     public String getTitle()
     {
@@ -50,14 +53,14 @@ public class Tour extends Visit
         this.start = start;
     }
 
-    public LocalDateTime getEnd()
+    public Long getDuration()
     {
-        return end;
+        return duration;
     }
 
-    public void setEnd(LocalDateTime end)
+    public void setDuration(Long duration)
     {
-        this.end = end;
+        this.duration = duration;
     }
 
     public Guide getTourGuide()
@@ -75,17 +78,17 @@ public class Tour extends Visit
         return visitors;
     }
 
-    public void setVisitors(List<Visitor> visitors)
+    protected void setVisitors(List<Visitor> visitors)
     {
         this.visitors = visitors;
     }
 
-    public Tour(Integer priceAdult, Integer priceUnderaged, String title, LocalDateTime start, LocalDateTime end, Guide tourGuide, List<Visitor> visitors)
+    public Tour(Double priceAdult, Double priceUnderaged, String title, LocalDateTime start, Long duration, Guide tourGuide, List<Visitor> visitors)
     {
         super(priceAdult, priceUnderaged);
         this.title = title;
         this.start = start;
-        this.end = end;
+        this.duration = duration;
         this.tourGuide = tourGuide;
         this.visitors = visitors;
     }

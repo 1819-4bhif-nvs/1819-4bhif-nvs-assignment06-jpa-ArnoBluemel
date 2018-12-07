@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "PERSONS")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Person
 {
     protected static Integer DEFAULT_CLEARANCE_VISITOR = 0;
@@ -12,7 +12,7 @@ public abstract class Person
     protected static Integer DEFAULT_CLEARANCE_SCIENTIST = 2;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
     private Long id;
     @Version
@@ -21,10 +21,12 @@ public abstract class Person
 
     @Column(name = "NAME", nullable = false)
     private String name;
-    @Column(name = "AGE", nullable = false)
+    @Column(name = "PERSON_AGE", nullable = false)
     private Long age;
     @Column(name = "CLEARANCE", nullable = false)
     private Integer clearance;
+
+    protected Person() { }
 
     public String getName()
     {
@@ -56,7 +58,7 @@ public abstract class Person
         this.clearance = clearance;
     }
 
-    public Person(String name, Long age, Integer clearance)
+    protected Person(String name, Long age, Integer clearance)
     {
         this.name = name;
         this.clearance = clearance;

@@ -4,11 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "STAFF")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Staff extends Person
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
     private Long id;
     @Version
@@ -17,6 +17,8 @@ public abstract class Staff extends Person
 
     @Column(name = "SALARY", nullable = false, precision = 2)
     private Double salary;
+
+    protected Staff() { }
 
     public Double getSalary()
     {
@@ -28,7 +30,7 @@ public abstract class Staff extends Person
         this.salary = salary;
     }
 
-    public Staff(String name, Long age, Integer clearance, Double salary)
+    protected Staff(String name, Long age, Integer clearance, Double salary)
     {
         super(name, age, clearance);
         this.salary = salary;

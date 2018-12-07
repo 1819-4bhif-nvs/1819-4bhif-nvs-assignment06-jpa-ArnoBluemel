@@ -18,4 +18,6 @@ public class Guide extends Staff
     {
         super(name, age, Person.DEFAULT_CLEARANCE_PERSONNEL, salary);
     }
+
+    public Guide() { }
 }

@@ -2,11 +2,28 @@ package at.htl.assignment06.model.objects;
 
 import at.htl.assignment06.model.building.ExhibitionRoom;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "MINERALS")
 public class Mineral extends Exhibit
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", updatable = false, nullable = false)
+    private Long id;
+    @Version
+    @Column(name = "VERSION")
+    private int version;
+
+    @Column(name = "CHEMICAL_NAME")
     private String chemicalName;
+    @Column(name = "CHEMICAL_FORMULA")
     private String chemicalFormula;
+    @Column(name = "DENSITY")
     private Double density;
+
+    public Mineral() { }
 
     public String getChemicalName()
     {

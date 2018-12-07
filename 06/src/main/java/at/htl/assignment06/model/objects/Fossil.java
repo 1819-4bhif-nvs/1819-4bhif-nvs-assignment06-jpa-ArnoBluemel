@@ -15,73 +15,75 @@ public class Fossil extends Exhibit
     @Version
     @Column(name = "VERSION")
     private int version;
+    @Column(name = "AGE_IN_MY")
+    private Long age_in_my;
+    //tax = taxonomic
+    @Column(name = "TAX_SPECIES", nullable = false)
+    private String tax_species;
+    @Column(name = "TAX_GENUS", nullable = false)
+    private String tax_genus;
+    @Column(name = "TAX_FAMILY", nullable = false)
+    private String tax_family;
+    @Column(name = "TAX_ORDER", nullable = false)
+    private String tax_order;
+    @Column(name = "TAX_CLASS", nullable = false)
+    private String tax_class;
+    @Column(name = "TAX_PHYLUM", nullable = false)
+    private String tax_phylum;
+    @Column(name = "TAX_KINGDOM", nullable = false)
+    private String tax_kingdom;
+    @Column(name = "TAX_DOMAIN", nullable = false)
+    private String tax_domain;
 
-    @Column(name = "AGE")//null == unknown
-    private Long age;
-    @Column(name = "SPECIES", nullable = false)
-    private String species;
-    @Column(name = "GENUS", nullable = false)
-    private String genus;
-    @Column(name = "FAMILY", nullable = false)
-    private String family;
-    @Column(name = "ORDER", nullable = false)
-    private String order;
-    @Column(name = "CLASS", nullable = false)
-    private String tax_class; //tax = taxonomy
-    @Column(name = "PHYLUM", nullable = false)
-    private String phylum;
-    @Column(name = "KINGDOM", nullable = false)
-    private String kingdom;
-    @Column(name = "DOMAIN", nullable = false)
-    private String domain;
+    public Fossil() { }
 
-    public Long getAge()
+    public Long getAge_in_my()
     {
-        return age;
+        return age_in_my;
     }
 
-    public void setAge(Long age)
+    public void setAge_in_my(Long age)
     {
-        this.age = age;
+        this.age_in_my = age;
     }
 
-    public String getSpecies()
+    public String getTax_species()
     {
-        return species;
+        return tax_species;
     }
 
-    public void setSpecies(String species)
+    public void setTax_species(String species)
     {
-        this.species = species;
+        this.tax_species = species;
     }
 
-    public String getGenus()
+    public String getTax_genus()
     {
-        return genus;
+        return tax_genus;
     }
 
-    public void setGenus(String genus)
+    public void setTax_genus(String genus)
     {
-        this.genus = genus;
+        this.tax_genus = genus;
     }
 
-    public String getFamily() {
-        return family;
+    public String getTax_family() {
+        return tax_family;
     }
 
-    public void setFamily(String family)
+    public void setTax_family(String family)
     {
-        this.family = family;
+        this.tax_family = family;
     }
 
-    public String getOrder()
+    public String getTax_order()
     {
-        return order;
+        return tax_order;
     }
 
-    public void setOrder(String order)
+    public void setTax_order(String order)
     {
-        this.order = order;
+        this.tax_order = order;
     }
 
     public String getTax_class()
@@ -94,47 +96,47 @@ public class Fossil extends Exhibit
         this.tax_class = tax_class;
     }
 
-    public String getPhylum()
+    public String getTax_phylum()
     {
-        return phylum;
+        return tax_phylum;
     }
 
-    public void setPhylum(String phylum)
+    public void setTax_phylum(String phylum)
     {
-        this.phylum = phylum;
+        this.tax_phylum = phylum;
     }
 
-    public String getKingdom()
+    public String getTax_kingdom()
     {
-        return kingdom;
+        return tax_kingdom;
     }
 
-    public void setKingdom(String kingdom)
+    public void setTax_kingdom(String kingdom)
     {
-        this.kingdom = kingdom;
+        this.tax_kingdom = kingdom;
     }
 
-    public String getDomain()
+    public String getTax_domain()
     {
-        return domain;
+        return tax_domain;
     }
 
-    public void setDomain(String domain)
+    public void setTax_domain(String domain)
     {
-        this.domain = domain;
+        this.tax_domain = domain;
     }
 
-    public Fossil(String exhibitName, String origin, ExhibitionRoom room, Long age, String species, String genus, String family, String order, String tax_class, String phylum, String kingdom, String domain)
+    public Fossil(String exhibitName, String origin, ExhibitionRoom room, Long age, String tax_species, String genus, String family, String order, String tax_class, String phylum, String kingdom, String domain)
     {
         super(exhibitName, origin, room);
-        this.age = age;
-        this.species = species;
-        this.genus = genus;
-        this.family = family;
-        this.order = order;
+        this.age_in_my = age;
+        this.tax_species = tax_species;
+        this.tax_genus = genus;
+        this.tax_family = family;
+        this.tax_order = order;
         this.tax_class = tax_class;
-        this.phylum = phylum;
-        this.kingdom = kingdom;
-        this.domain = domain;
+        this.tax_phylum = phylum;
+        this.tax_kingdom = kingdom;
+        this.tax_domain = domain;
     }
 }

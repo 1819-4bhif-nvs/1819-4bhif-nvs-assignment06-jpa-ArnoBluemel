@@ -16,8 +16,11 @@ public class Visitor extends Person
     @Column(name = "VERSION")
     private int version;
 
-    @Column(name = "FAVOURITE_OBJECT")
+    //@Column(name = "FAVOURITE_OBJECT")
+    @ManyToOne
     private Exhibit favouriteObject;
+
+    public Visitor() { }
 
     public Exhibit getFavouriteObject()
     {

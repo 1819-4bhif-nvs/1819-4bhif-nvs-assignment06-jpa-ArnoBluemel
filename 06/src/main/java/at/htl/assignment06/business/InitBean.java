@@ -1,14 +1,23 @@
 package at.htl.assignment06.business;
 
 import at.htl.assignment06.model.building.ExhibitionRoom;
+import at.htl.assignment06.model.building.ResearchRoom;
+import at.htl.assignment06.model.events.SingleVisit;
+import at.htl.assignment06.model.events.Tour;
+import at.htl.assignment06.model.objects.Fossil;
 import at.htl.assignment06.model.objects.Mineral;
+import at.htl.assignment06.model.people.Guide;
 import at.htl.assignment06.model.people.Scientist;
+import at.htl.assignment06.model.people.Visitor;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Startup
 @Singleton
@@ -25,12 +34,53 @@ public class InitBean
     @PostConstruct
     private void init()
     {
-        Scientist scientist1 = new Scientist("Alan Grant", 56L, 3056.40D, "Paleontology", "Prof.", "");
-        ExhibitionRoom exRoom1 = new ExhibitionRoom("Jewels", scientist1);
-        Mineral mineral1 = new Mineral("Diamond", "Ruanda", exRoom1, "Carbon", "C", 3520D);
-
+        //Persons
+        //-Staff
+        //--Guides
+        Guide guide1 = new Guide("Deppy Dave", 46L, 506.80D);
+        Guide guide2 = new Guide("John Doe", 22L, 490.45D);
+        //--Scientists
+        Scientist scientist1 = new Scientist("Ellie Sattler", 45L, 2800.87D, "Paleobiology", "Dr.", "");
+        Scientist scientist2 = new Scientist("Alan Grant", 56L, 3467.40D, "Paleontology", "Dr.", "");
+        Scientist scientist3 = new Scientist("Ian Malcolm", 36L, 2763.65D, "Chaos Theory", "Dr.", "");
+        Scientist scientist4 = new Scientist("John Hammond", 73L, 5904.53D, "Genetics", "Prof.", "");
+        //-Visitors
+        Visitor visitor1 = new Visitor("Max Mustermann", 50L, null);
+        Visitor visitor2 = new Visitor("Erika Mustermann", 47L, null);
+        Visitor visitor3 = new Visitor("Michael Mustermann", 12L, null);
+        Visitor visitor4 = new Visitor("David Wong", 35L, null);
+        //Rooms
+        //-ExhibitionRooms
+        ExhibitionRoom exRoom1 = new ExhibitionRoom("Late Cretaceous Period", scientist2);
+        ExhibitionRoom exRoom2 = new ExhibitionRoom("Precious Stones", scientist3);
+        ExhibitionRoom exRoom3 = new ExhibitionRoom("Mesozoic Era", scientist2);
+        ExhibitionRoom exRoom4 = new ExhibitionRoom("Jurassic Park", scientist4);
+        ExhibitionRoom exRoom5 = new ExhibitionRoom("Dinosaur Anatomy", scientist2);
+        //-ResearchRooms
+        ResearchRoom reRoom1 = new ResearchRoom("Archive", new ArrayList());
+        ResearchRoom reRoom2 = new ResearchRoom("Hammond Creation Lab", new ArrayList());
+        ResearchRoom reRoom3 = new ResearchRoom("Geological Research", new ArrayList());
+        reRoom1.getScientists().add(scientist1);
+        reRoom1.getScientists().add(scientist2);
+        reRoom1.getScientists().add(scientist3);
+        reRoom1.getScientists().add(scientist4);
+        reRoom2.getScientists().add(scientist2);
+        reRoom2.getScientists().add(scientist4);
+        reRoom3.getScientists().add(scientist3);
+        //Visits
+        //-SingleVisits
+        SingleVisit siVisit1 = new SingleVisit(visitor4, LocalDateTime.of(2018, 8, 26, 13, 46));
+        //-Tours
+        Tour tour1 = new Tour(10D, 2D, "The Land Before Time", LocalDateTime.of(2018, 10, 20, 9, 12), 4L, guide1, new ArrayList());
+        tour1.getVisitors().add(visitor1);
+        tour1.getVisitors().add(visitor2);
+        tour1.getVisitors().add(visitor3);
+        //Exhibits
+        //-Fossils
+        Fossil fossil1 = new Fossil("T-Rex Scapula", "Dinosaur Provincial Park", exRoom1, 68L, "Tyrannosaurus rex", "Tyrannosaurus", "Tyrannosauridae", "Saurischia", "Reptilia", "Chordata", "Animalia", "Eucaryota");
+        Fossil fossil2 = new Fossil("Triceratops Cranium", "Great Plains", exRoom1, 67L, "Ceratops horridus", "Triceratops", "Ceratopsidae", "Ornitischia", "Reptilia", "Chordata", "Animalia", "Eucaryota");
         em.persist(scientist1);
         em.persist(exRoom1);
-        em.persist(mineral1);
+        em.persist(fossil1);
     }
 }

@@ -21,6 +21,8 @@ public class Scientist extends Staff
     @Column(name = "TITLE_POSTFIX")
     private String titlePostfix;
 
+    public Scientist() { }
+
     public String getFieldOfResearch()
     {
         return fieldOfResearch;

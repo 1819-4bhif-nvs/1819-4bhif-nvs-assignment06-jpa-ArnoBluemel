@@ -4,11 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "VISITS")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Visit
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", updatable = false, nullable = false)
     private Long id;
     @Version
@@ -16,31 +16,33 @@ public abstract class Visit
     private int version;
 
     @Column(name = "PRICE_ADULT", nullable = false, precision = 2)
-    private Integer priceAdult;
+    private Double priceAdult;
     @Column(name = "PRICE_UNDERAGED", nullable = false, precision = 2)
-    private Integer priceUnderaged;
+    private Double priceUnderaged;
 
-    public Integer getPriceAdult()
+    protected Visit() { }
+
+    public Double getPriceAdult()
     {
         return priceAdult;
     }
 
-    public void setPriceAdult(Integer priceAdult)
+    public void setPriceAdult(Double priceAdult)
     {
         this.priceAdult = priceAdult;
     }
 
-    public Integer getPriceUnderaged()
+    public Double getPriceUnderaged()
     {
         return priceUnderaged;
     }
 
-    public void setPriceUnderaged(Integer priceUnderaged)
+    public void setPriceUnderaged(Double priceUnderaged)
     {
         this.priceUnderaged = priceUnderaged;
     }
 
-    public Visit(Integer priceAdult, Integer priceUnderaged)
+    protected Visit(Double priceAdult, Double priceUnderaged)
     {
         this.priceAdult = priceAdult;
         this.priceUnderaged = priceUnderaged;
