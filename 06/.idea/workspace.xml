@@ -6,31 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949e8d8d-476f-40e9-ac54-8ebab07e15dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/RestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java" afterDir="false" />
+    <list default="true" id="949e8d8d-476f-40e9-ac54-8ebab07e15dd" name="Default Changelist" comment="added h2-database">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b88e526e-835e-40a6-82e4-f1b465d69226.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ExhibitionRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ExhibitionRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/SingleVisit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/SingleVisit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Visit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Exhibit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Exhibit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Fossil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Fossil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Guide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Guide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Scientist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Scientist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,8 +44,12 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DerbyDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="APP: schema" type="12aa88c4:DerbyImplModel$Schema" />
+        <item name="H2DB@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="H2DB@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="H2DB: database" type="2aa06773:H2ImplModel$Database" />
       </path>
     </expand>
     <select />
@@ -69,62 +59,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/RestConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/business/InitBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="80" column="165" selection-start-line="80" selection-start-column="157" selection-end-line="80" selection-end-column="165" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Tour.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/SingleVisit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+            <state relative-caret-position="332">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+            <state relative-caret-position="349">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +95,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1717">
-              <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,8 +158,6 @@
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/entities/people/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/session/InitBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/RestConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Guide.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Scientist.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Visitor.java" />
@@ -217,13 +165,8 @@
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/ExhibitEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/MineralEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/FossilEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExibitionRoomEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Fossil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Visit.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Exhibit.java" />
@@ -231,7 +174,14 @@
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Staff.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/SingleVisit.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/events/Tour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/business/InitBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java" />
       </list>
     </option>
   </component>
@@ -255,7 +205,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,55 +254,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="assignment06" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment06" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="building" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment06" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment06" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment06" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="people" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment06" type="462c0819:PsiDirectoryNode" />
               <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -370,13 +270,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="h2&#10;derby" />
+    <property name="DatabaseDriversLRU" value="derby&#10;h2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544109590776" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544181819472" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -494,7 +395,8 @@
       <workItem from="1543823105049" duration="11411000" />
       <workItem from="1543907452754" duration="135000" />
       <workItem from="1544007919228" duration="2333000" />
-      <workItem from="1544098866487" duration="10678000" />
+      <workItem from="1544098866487" duration="15544000" />
+      <workItem from="1544262554283" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="added initBean.java and persistence.xml">
       <created>1543830380593</created>
@@ -503,17 +405,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543830380593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added REST=endpoints">
+      <created>1544176734136</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544176734136</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37456000" />
+    <option name="totallyTimeSpent" value="44633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1858" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.20244716" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.20467186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" sideWeight="0.50091076" side_tool="true" weight="0.1947592" />
       <window_info id="Designer" order="3" />
@@ -522,11 +431,9 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="UI Designer" order="7" />
       <window_info id="Persistence" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32924527" />
-      <window_info anchor="bottom" id="SQL Generator" weight="0.32924527" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49787536" visible="true" weight="0.2745283" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49787536" weight="0.26981133" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49787536" weight="0.31257632" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,7 +445,10 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5042493" side_tool="true" weight="0.33211234" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49929178" weight="0.32967034" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49929178" weight="0.32924527" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" sideWeight="0.49929178" visible="true" weight="0.32924527" />
+      <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32924527" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32924527" />
+      <window_info anchor="bottom" id="SQL Generator" order="17" weight="0.32924527" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -596,7 +506,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added initBean.java and persistence.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added initBean.java and persistence.xml" />
+    <MESSAGE value="added REST=endpoints" />
+    <MESSAGE value="added h2-database" />
+    <option name="LAST_COMMIT_MESSAGE" value="added h2-database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,93 +523,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JavaScript-modules-diagram/C:/Users/arnob/Documents/SCHEISSE/GithubClassroomRepos/06/1819-4bhif-nvs-assignment06-jpa-ArnoBluemel/06/src/main/java/at/htl/assignment06">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/src/main/java/at/htl/assignment06</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="479.0" y="248.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Overview</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/at.htl.assignment06.building">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>at.htl.assignment06.building</OriginalElement>
-          <nodes>
-            <node x="" y="">at.htl.assignment06.building.Room</node>
-            <node x="" y="">at.htl.assignment06.building.ResearchRoom</node>
-            <node x="" y="">at.htl.assignment06.building.ExhibitionRoom</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="140.0" y="55.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/at.htl.assignment06.people">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>at.htl.assignment06.people</OriginalElement>
-          <nodes>
-            <node x="148.25" y="80.0">at.htl.assignment06.people.Visitor</node>
-            <node x="99.0" y="160.0">at.htl.assignment06.people.Scientist</node>
-            <node x="99.0" y="0.0">at.htl.assignment06.people.Person</node>
-            <node x="56.25" y="80.0">at.htl.assignment06.people.Staff</node>
-            <node x="0.0" y="160.0">at.htl.assignment06.people.Guide</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="at.htl.assignment06.people.Scientist" target="at.htl.assignment06.people.Staff">
-              <point x="0.0" y="-15.0" />
-              <point x="145.0" y="135.0" />
-              <point x="110.25" y="135.0" />
-              <point x="18.0" y="15.0" />
-            </edge>
-            <edge source="at.htl.assignment06.people.Guide" target="at.htl.assignment06.people.Staff">
-              <point x="0.0" y="-15.0" />
-              <point x="39.5" y="135.0" />
-              <point x="74.25" y="135.0" />
-              <point x="-18.0" y="15.0" />
-            </edge>
-            <edge source="at.htl.assignment06.people.Visitor" target="at.htl.assignment06.people.Person">
-              <point x="0.0" y="-15.0" />
-              <point x="188.75" y="55.0" />
-              <point x="161.25" y="55.0" />
-              <point x="20.75" y="15.0" />
-            </edge>
-            <edge source="at.htl.assignment06.people.Staff" target="at.htl.assignment06.people.Person">
-              <point x="0.0" y="-15.0" />
-              <point x="92.25" y="55.0" />
-              <point x="119.75" y="55.0" />
-              <point x="-20.75" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-124.0" y="87.0" />
-          <SelectedNodes>
-            <node>at.htl.assignment06.people.Guide</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/at.htl.assignment06.building.ExhibitionRoom">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1127,13 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/people/Guide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1161,31 +979,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/GUIDES">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/MINERALS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1199,13 +993,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/ROOMS_SCIENTISTS">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/ROOMS_SCIENTISTS" />
     <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/SCIENTISTS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1241,80 +1029,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/MineralEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/FossilEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExibitionRoomEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/MineralEndpoint.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/FossilEndpoint.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExibitionRoomEndpoint.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Fossil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1328,26 +1049,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1420,10 +1121,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/objects/Mineral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3ce63106-e77b-41b1-bead-d671100763a5/schema/APP/table/MINERALS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9017db19-6b0f-465f-9714-06dcac65d9a0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/derby.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db/log/README_DO_NOT_TOUCH_FILES.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/business/InitBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="80" column="165" selection-start-line="80" selection-start-column="157" selection-end-line="80" selection-end-column="165" />
+        <state relative-caret-position="170">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/ExhibitEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/RoomEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/VisitEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/rest/endpoints/PersonEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/assignment06/model/building/ResearchRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

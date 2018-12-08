@@ -15,15 +15,15 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
 
 @Startup
 @Singleton
 public class InitBean
 {
-    @PersistenceContext
+    @PersistenceContext(unitName = "H2PU")
     private EntityManager em;
 
     public InitBean()
@@ -79,8 +79,37 @@ public class InitBean
         //-Fossils
         Fossil fossil1 = new Fossil("T-Rex Scapula", "Dinosaur Provincial Park", exRoom1, 68L, "Tyrannosaurus rex", "Tyrannosaurus", "Tyrannosauridae", "Saurischia", "Reptilia", "Chordata", "Animalia", "Eucaryota");
         Fossil fossil2 = new Fossil("Triceratops Cranium", "Great Plains", exRoom1, 67L, "Ceratops horridus", "Triceratops", "Ceratopsidae", "Ornitischia", "Reptilia", "Chordata", "Animalia", "Eucaryota");
+        visitor1.setFavouriteObject(fossil2);
+        visitor3.setFavouriteObject(fossil1);
+        visitor4.setFavouriteObject(fossil2);
+        //-Minerals
+        Mineral mineral1 = new Mineral("Diamond", "Ruanda", exRoom2, "Carbon", "C", 3520D);
+        Mineral mineral2 = new Mineral("Ruby", "Kenya", exRoom2, "Aluminium Oxide with Chromium", "Al2O3:Cr", 4050D);
+        visitor2.setFavouriteObject(mineral1);
+        //persist
+        em.persist(guide1);
+        em.persist(guide2);
         em.persist(scientist1);
+        em.persist(scientist2);
+        em.persist(scientist3);
+        em.persist(scientist4);
+        em.persist(visitor1);
+        em.persist(visitor2);
+        em.persist(visitor3);
+        em.persist(visitor4);
         em.persist(exRoom1);
+        em.persist(exRoom2);
+        em.persist(exRoom3);
+        em.persist(exRoom4);
+        em.persist(exRoom5);
+        em.persist(reRoom1);
+        em.persist(reRoom2);
+        em.persist(reRoom3);
+        em.persist(siVisit1);
+        em.persist(tour1);
         em.persist(fossil1);
+        em.persist(fossil2);
+        em.persist(mineral1);
+        em.persist(mineral2);
     }
 }

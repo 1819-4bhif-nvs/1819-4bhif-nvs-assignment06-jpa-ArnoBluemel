@@ -2,6 +2,7 @@ package at.htl.assignment06.model.building;
 
 import at.htl.assignment06.model.people.Scientist;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.List;
 
@@ -16,7 +17,9 @@ public class ResearchRoom extends Room
     @Version
     @Column(name = "VERSION")
     private int version;
+
     @ManyToMany
+    @JsonbTransient
     private List<Scientist> scientists;
 
     public ResearchRoom(String roomName, List<Scientist> scientists)

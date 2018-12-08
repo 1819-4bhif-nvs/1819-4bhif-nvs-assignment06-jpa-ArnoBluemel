@@ -7,6 +7,7 @@ import at.htl.assignment06.model.events.Visit;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -19,7 +20,7 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class VisitEndpoint
 {
-    @PersistenceContext
+    @PersistenceContext(unitName = "H2PU")
     EntityManager em;
 
     @GET

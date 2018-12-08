@@ -7,11 +7,9 @@ import at.htl.assignment06.model.objects.Mineral;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -19,7 +17,7 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ExhibitEndpoint
 {
-    @PersistenceContext
+    @PersistenceContext(unitName = "H2PU")
     EntityManager em;
 
     @GET
@@ -51,12 +49,20 @@ public class ExhibitEndpoint
     @GET
     @Path("minerals/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getMineral(@PathParam("id")int id)
+    public Response getMineral(@PathParam("id")long id)
     {
         Mineral m = em.find(Mineral.class, id);
         return  Response.ok().entity(m).build();
     }
 
+    @POST
+    @Path("minerals")
+    public Response postMineral(Mineral m)
+    {
+        em.merge(m);
+        em.persist(m);
+        return Response.ok().entity(m).build();
+    }
 
     @GET
     @Path("fossils")
