@@ -17,9 +17,10 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ExhibitEndpoint
 {
-    @PersistenceContext(unitName = "H2PU")
+    @PersistenceContext(unitName = "DerbyPU")
     EntityManager em;
 
+    //Exhibits
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll()
@@ -37,6 +38,24 @@ public class ExhibitEndpoint
         return  Response.ok().entity(e).build();
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postExhibits(Exhibit e)
+    {
+        em.merge(e);
+        em.persist(e);
+        return Response.ok().entity(e).build();
+    }
+
+    @DELETE
+    @Path("d/{id}")
+    public void deleteExhibit(@PathParam("id") long id)
+    {
+        em.remove(em.find(Exhibit.class, id));
+    }
+    //Exhibits
+
+    //Minerals
     @GET
     @Path("minerals")
     @Produces(MediaType.APPLICATION_JSON)
@@ -57,6 +76,7 @@ public class ExhibitEndpoint
 
     @POST
     @Path("minerals")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response postMineral(Mineral m)
     {
         em.merge(m);
@@ -64,6 +84,15 @@ public class ExhibitEndpoint
         return Response.ok().entity(m).build();
     }
 
+    @DELETE
+    @Path("minerals/d/{id}")
+    public void deleteMineral(@PathParam("id") long id)
+    {
+        em.remove(em.find(Mineral.class, id));
+    }
+    //Minerals
+
+    //Fossils
     @GET
     @Path("fossils")
     @Produces(MediaType.APPLICATION_JSON)
@@ -81,4 +110,22 @@ public class ExhibitEndpoint
         Fossil f = em.find(Fossil.class, id);
         return Response.ok().entity(f).build();
     }
+
+    @POST
+    @Path("fossils")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postFossil(Fossil f)
+    {
+        em.merge(f);
+        em.persist(f);
+        return Response.ok().entity(f).build();
+    }
+
+    @DELETE
+    @Path("fossils/d/{id}")
+    public void deleteFossil(@PathParam("id") long id)
+    {
+        em.remove(em.find(Fossil.class, id));
+    }
+    //Fossils
 }

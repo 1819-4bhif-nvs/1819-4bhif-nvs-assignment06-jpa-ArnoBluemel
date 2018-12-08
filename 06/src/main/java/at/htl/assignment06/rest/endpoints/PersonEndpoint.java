@@ -1,5 +1,7 @@
 package at.htl.assignment06.rest.endpoints;
 
+import at.htl.assignment06.model.events.Visit;
+import at.htl.assignment06.model.objects.Mineral;
 import at.htl.assignment06.model.people.*;
 
 import javax.ejb.Stateless;
@@ -7,10 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -18,9 +17,10 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class PersonEndpoint
 {
-    @PersistenceContext(unitName = "H2PU")
+    @PersistenceContext(unitName = "DerbyPU")
     EntityManager em;
 
+    //Persons
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll()
@@ -38,6 +38,24 @@ public class PersonEndpoint
         return Response.ok().entity(p).build();
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postPerson(Person p)
+    {
+        em.merge(p);
+        em.persist(p);
+        return Response.ok().entity(p).build();
+    }
+
+    @DELETE
+    @Path("d/{id}")
+    public void deletePerson(@PathParam("id") long id)
+    {
+        em.remove(em.find(Person.class, id));
+    }
+    //Persons
+
+    //Staff
     @GET
     @Path("staff")
     @Produces(MediaType.APPLICATION_JSON)
@@ -56,6 +74,25 @@ public class PersonEndpoint
         return Response.ok().entity(s).build();
     }
 
+    @POST
+    @Path("staff")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postMineral(Staff s)
+    {
+        em.merge(s);
+        em.persist(s);
+        return Response.ok().entity(s).build();
+    }
+
+    @DELETE
+    @Path("staff/d/{id}")
+    public void deleteStaff(@PathParam("id") long id)
+    {
+        em.remove(em.find(Staff.class, id));
+    }
+    //Staff
+
+    //Guides
     @GET
     @Path("staff/guides")
     @Produces(MediaType.APPLICATION_JSON)
@@ -74,8 +111,25 @@ public class PersonEndpoint
         return Response.ok().entity(g).build();
     }
 
+    @POST
+    @Path("staff/guides")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postGuide(Guide g)
+    {
+        em.merge(g);
+        em.persist(g);
+        return Response.ok().entity(g).build();
+    }
 
+    @DELETE
+    @Path("staff/guides/d/{id}")
+    public void deleteGuide(@PathParam("id") long id)
+    {
+        em.remove(em.find(Guide.class, id));
+    }
+    //Guides
 
+    //Scientists
     @GET
     @Path("staff/scientists")
     @Produces(MediaType.APPLICATION_JSON)
@@ -94,6 +148,25 @@ public class PersonEndpoint
         return Response.ok().entity(s).build();
     }
 
+    @POST
+    @Path("staff/scientists")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postScientist(Scientist s)
+    {
+        em.merge(s);
+        em.persist(s);
+        return Response.ok().entity(s).build();
+    }
+
+    @DELETE
+    @Path("staff/scientists/d/{id}")
+    public void deleteScientist(@PathParam("id") long id)
+    {
+        em.remove(em.find(Scientist.class, id));
+    }
+    //Scientists
+
+    //Visitors
     @GET
     @Path("visitors")
     @Produces(MediaType.APPLICATION_JSON)
@@ -111,4 +184,22 @@ public class PersonEndpoint
         Visitor v = em.find(Visitor.class, id);
         return Response.ok().entity(v).build();
     }
+
+    @POST
+    @Path("visitors")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postVisitor(Visitor v)
+    {
+        em.merge(v);
+        em.persist(v);
+        return Response.ok().entity(v).build();
+    }
+
+    @DELETE
+    @Path("visitors/d/{id}")
+    public void deleteVisitor(@PathParam("id") long id)
+    {
+        em.remove(em.find(Visitor.class, id));
+    }
+    //Visitors
 }

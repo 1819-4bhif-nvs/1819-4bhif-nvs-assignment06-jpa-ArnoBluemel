@@ -3,16 +3,14 @@ package at.htl.assignment06.rest.endpoints;
 import at.htl.assignment06.model.events.SingleVisit;
 import at.htl.assignment06.model.events.Tour;
 import at.htl.assignment06.model.events.Visit;
+import at.htl.assignment06.model.objects.Mineral;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -20,9 +18,10 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class VisitEndpoint
 {
-    @PersistenceContext(unitName = "H2PU")
+    @PersistenceContext(unitName = "DerbyPU")
     EntityManager em;
 
+    //Visits
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll()
@@ -40,6 +39,24 @@ public class VisitEndpoint
         return Response.ok().entity(v).build();
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postVisit(Visit v)
+    {
+        em.merge(v);
+        em.persist(v);
+        return Response.ok().entity(v).build();
+    }
+
+    @DELETE
+    @Path("d/{id}")
+    public void deleteVisit(@PathParam("id") long id)
+    {
+        em.remove(em.find(Visit.class, id));
+    }
+    //Visits
+
+    //SingleVisits
     @GET
     @Path("single-vists")
     @Produces(MediaType.APPLICATION_JSON)
@@ -58,6 +75,25 @@ public class VisitEndpoint
         return Response.ok().entity(sv).build();
     }
 
+    @POST
+    @Path("single-visits")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postSingleVisit(SingleVisit sv)
+    {
+        em.merge(sv);
+        em.persist(sv);
+        return Response.ok().entity(sv).build();
+    }
+
+    @DELETE
+    @Path("single-visits/d/{id}")
+    public void deleteSingleVisit(@PathParam("id") long id)
+    {
+        em.remove(em.find(SingleVisit.class, id));
+    }
+    //SingleVisits
+
+    //Tours
     @GET
     @Path("tours")
     @Produces(MediaType.APPLICATION_JSON)
@@ -75,4 +111,22 @@ public class VisitEndpoint
         Tour t = em.find(Tour.class, id);
         return Response.ok().entity(t).build();
     }
+
+    @POST
+    @Path("tours")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postMineral(Tour t)
+    {
+        em.merge(t);
+        em.persist(t);
+        return Response.ok().entity(t).build();
+    }
+
+    @DELETE
+    @Path("tours/d/{id}")
+    public void deleteTour(@PathParam("id") long id)
+    {
+        em.remove(em.find(Tour.class, id));
+    }
+    //Tours
 }

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 @Singleton
 public class InitBean
 {
-    @PersistenceContext(unitName = "H2PU")
+    @PersistenceContext(unitName = "DerbyPU")
     private EntityManager em;
 
     public InitBean()

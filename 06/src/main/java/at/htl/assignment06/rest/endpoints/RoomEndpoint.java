@@ -3,16 +3,14 @@ package at.htl.assignment06.rest.endpoints;
 import at.htl.assignment06.model.building.ExhibitionRoom;
 import at.htl.assignment06.model.building.ResearchRoom;
 import at.htl.assignment06.model.building.Room;
+import at.htl.assignment06.model.objects.Mineral;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -20,9 +18,10 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class RoomEndpoint
 {
-    @PersistenceContext(unitName = "H2PU")
+    @PersistenceContext(unitName = "DerbyPU")
     EntityManager em;
 
+    //Rooms
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll()
@@ -40,6 +39,24 @@ public class RoomEndpoint
         return Response.ok().entity(r).build();
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postRoom(Room r)
+    {
+        em.merge(r);
+        em.persist(r);
+        return Response.ok().entity(r).build();
+    }
+
+    @DELETE
+    @Path("d/{id}")
+    public void deleteRoom(@PathParam("id") long id)
+    {
+        em.remove(em.find(Room.class, id));
+    }
+    //Rooms
+
+    //ExhibitionRooms
     @GET
     @Path("exhibition-rooms")
     @Produces(MediaType.APPLICATION_JSON)
@@ -58,6 +75,25 @@ public class RoomEndpoint
         return Response.ok().entity(er).build();
     }
 
+    @POST
+    @Path("exhibition-rooms")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postExhibitionRoom(ExhibitionRoom er)
+    {
+        em.merge(er);
+        em.persist(er);
+        return Response.ok().entity(er).build();
+    }
+
+    @DELETE
+    @Path("exhibition-rooms/d/{id}")
+    public void deleteExhibitionRoom(@PathParam("id") long id)
+    {
+        em.remove(em.find(ExhibitionRoom.class, id));
+    }
+    //ExhibitionRooms
+
+    //ResearchRooms
     @GET
     @Path("research-rooms")
     @Produces(MediaType.APPLICATION_JSON)
@@ -75,4 +111,22 @@ public class RoomEndpoint
         ResearchRoom er = em.find(ResearchRoom.class, id);
         return Response.ok().entity(er).build();
     }
+
+    @POST
+    @Path("research-rooms")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response postResearchRoom(ResearchRoom rr)
+    {
+        em.merge(rr);
+        em.persist(rr);
+        return Response.ok().entity(rr).build();
+    }
+
+    @DELETE
+    @Path("research-rooms/d/{id}")
+    public void deleteMineral(@PathParam("id") long id)
+    {
+        em.remove(em.find(ResearchRoom.class, id));
+    }
+    //ResearchRooms
 }
